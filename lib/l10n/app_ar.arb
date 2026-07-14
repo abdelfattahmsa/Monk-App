@@ -1,7 +1,7 @@
 {
   "@@locale": "ar",
 
-  "appName": "PRP",
+  "appName": "Monk",
 
   "tabOverview": "الرئيسية",
   "tabTime": "الوقت",
@@ -66,7 +66,7 @@
 
   "focusSessionComplete": "🍅 انتهت جلسة التركيز!",
   "breakOver": "☕ انتهت فترة الراحة!",
-  "tapToReturn": "اضغط للعودة إلى PRP",
+  "tapToReturn": "اضغط للعودة إلى Monk",
 
   "focus": "تركيز",
   "breakLabel": "راحة",

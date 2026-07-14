@@ -1,5 +1,5 @@
-name: prp_system
-description: PRP — Personal Resource Planner
+name: monk_app
+description: Monk — Personal Mastery OS
 publish_to: 'none'
 version: 4.1.0+1
 

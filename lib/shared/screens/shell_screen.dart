@@ -466,7 +466,7 @@ class _ShellScreenState extends ConsumerState<ShellScreen> {
     final msg = state.mode == 'focus'
         ? '🍅 Focus session complete!'
         : '☕ Break over!';
-    _notify(msg, body: 'Tap to return to PRP');
+    _notify(msg, body: 'Tap to return to Monk');
     if (mounted) {
       ScaffoldMessenger.of(context)
           .showSnackBar(SnackBar(content: Text(msg)));

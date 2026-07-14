@@ -1,7 +1,7 @@
 {
   "@@locale": "en",
 
-  "appName": "PRP",
+  "appName": "Monk",
   "@appName": { "description": "Application name" },
 
   "tabOverview": "Overview",
@@ -169,7 +169,7 @@
   "breakOver": "☕ Break over!",
   "@breakOver": { "description": "Break over notification" },
 
-  "tapToReturn": "Tap to return to PRP",
+  "tapToReturn": "Tap to return to Monk",
   "@tapToReturn": { "description": "Notification body to return to app" },
 
   "focus": "Focus",

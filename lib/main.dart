@@ -34,11 +34,11 @@ void main() async {
 
   tz.initializeTimeZones();
 
-  runApp(const ProviderScope(child: PRPApp()));
+  runApp(const ProviderScope(child: MonkApp()));
 }
 
-class PRPApp extends ConsumerWidget {
-  const PRPApp({super.key});
+class MonkApp extends ConsumerWidget {
+  const MonkApp({super.key});
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {

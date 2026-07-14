@@ -441,7 +441,7 @@ class _ProfileSettingsScreenState extends ConsumerState<ProfileSettingsScreen> {
               Divider(height: 1, color: borderColor),
               SettingsTile(
                 title: 'App Version',
-                subtitle: 'PRP v${AppConstants.appVersion}',
+                subtitle: 'Monk v${AppConstants.appVersion}',
                 leading: const Icon(Icons.info_outline, size: 20),
                 onTap: () {},
               ),

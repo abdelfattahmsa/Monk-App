@@ -9,7 +9,7 @@ class AppLocalizationsEn extends AppLocalizations {
   AppLocalizationsEn([String locale = 'en']) : super(locale);
 
   @override
-  String get appName => 'PRP';
+  String get appName => 'Monk';
 
   @override
   String get tabOverview => 'Overview';
@@ -178,7 +178,7 @@ class AppLocalizationsEn extends AppLocalizations {
   String get breakOver => '☕ Break over!';
 
   @override
-  String get tapToReturn => 'Tap to return to PRP';
+  String get tapToReturn => 'Tap to return to Monk';
 
   @override
   String get focus => 'Focus';

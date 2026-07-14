@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 // ══════════════════════════════════════════════════════════════
-// DESIGN SYSTEM v3.0 — PRP System
+// DESIGN SYSTEM v3.0 — Monk
 // ══════════════════════════════════════════════════════════════
 
 /// Spacing system based on 4px grid

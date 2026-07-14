@@ -443,7 +443,7 @@ class _ProfileAppSettingsScreenState
             SectionCard(children: [
               SettingsTile(
                 title: 'App Version',
-                subtitle: 'PRP System v4.2.0',
+                subtitle: 'Monk v4.2.0',
                 leading:
                     Icon(Icons.info_outline, color: accent, size: 20),
               ),

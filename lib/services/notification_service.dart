@@ -21,7 +21,7 @@ class NotificationService {
       requestSoundPermission: true,
     );
     const windows = WindowsInitializationSettings(
-      appName: 'PRP',
+      appName: 'Monk',
       appUserModelId: 'com.prpapp.prp',
       guid: 'b7c3e1f2-d4a5-4890-b12c-def456789abc',
     );

@@ -9,7 +9,7 @@ class AppLocalizationsAr extends AppLocalizations {
   AppLocalizationsAr([String locale = 'ar']) : super(locale);
 
   @override
-  String get appName => 'PRP';
+  String get appName => 'Monk';
 
   @override
   String get tabOverview => 'الرئيسية';
@@ -178,7 +178,7 @@ class AppLocalizationsAr extends AppLocalizations {
   String get breakOver => '☕ انتهت فترة الراحة!';
 
   @override
-  String get tapToReturn => 'اضغط للعودة إلى PRP';
+  String get tapToReturn => 'اضغط للعودة إلى Monk';
 
   @override
   String get focus => 'تركيز';

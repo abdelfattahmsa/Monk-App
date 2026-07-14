@@ -169,7 +169,7 @@ class _OnboardingScreenState extends ConsumerState<OnboardingScreen> {
                   ),
                   child: Text(
                     _currentPage == _totalPages - 1
-                        ? 'Open PRP 🚀'
+                        ? 'Open Monk 🚀'
                         : _currentPage == 3
                             ? 'Almost done →'
                             : 'Next →',
@@ -221,7 +221,7 @@ class _WelcomePage extends StatelessWidget {
           ),
           const Gap(32),
           Text(
-            'Welcome to PRP',
+            'Welcome to Monk',
             style: Theme.of(context).textTheme.headlineMedium?.copyWith(
                   fontWeight: FontWeight.w800,
                   color: AppColors.textPrimary,
@@ -239,7 +239,7 @@ class _WelcomePage extends StatelessWidget {
           ),
           const Gap(16),
           Text(
-            'PRP helps you manage the four resources that determine the quality of your life:',
+            'Monk helps you manage the four resources that determine the quality of your life:',
             style: Theme.of(context).textTheme.bodyMedium?.copyWith(
                   color: AppColors.textSecondary,
                   height: 1.6,
@@ -995,7 +995,7 @@ class _AllSetPage extends StatelessWidget {
           ),
           const Gap(12),
           Text(
-            'Your PRP is ready. Here\'s your Getting Started checklist — it will appear in your Overview until you complete everything.',
+            'Your Monk is ready. Here\'s your Getting Started checklist — it will appear in your Overview until you complete everything.',
             style: Theme.of(context).textTheme.bodyMedium?.copyWith(
                   color: AppColors.textSecondary,
                   height: 1.6,
@@ -1107,7 +1107,7 @@ class _AllSetPage extends StatelessWidget {
             emoji: '📌',
             title: 'Daily habit',
             body:
-                'Open PRP each morning — check your score, log sleep, review your schedule.',
+                'Open Monk each morning — check your score, log sleep, review your schedule.',
           ),
           const Gap(32),
         ],

@@ -101,7 +101,7 @@ abstract class AppLocalizations {
   /// Application name
   ///
   /// In en, this message translates to:
-  /// **'PRP'**
+  /// **'Monk'**
   String get appName;
 
   /// Main nav tab: Overview
@@ -437,7 +437,7 @@ abstract class AppLocalizations {
   /// Notification body to return to app
   ///
   /// In en, this message translates to:
-  /// **'Tap to return to PRP'**
+  /// **'Tap to return to Monk'**
   String get tapToReturn;
 
   /// Focus timer label

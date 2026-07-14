@@ -130,7 +130,7 @@ class PrivacyScreen extends StatelessWidget {
                 '• Account information: your email address and display name, '
                 'provided during sign-up.\n\n'
                 '• App data you enter: financial records, health metrics, goals, '
-                'tasks, habits, and any other information you choose to add to PRP.\n\n'
+                'tasks, habits, and any other information you choose to add to Monk.\n\n'
                 '• Anonymous analytics: Vercel Analytics collects aggregated, '
                 'anonymous page-view counts and performance metrics. No personal '
                 'identifiers, device fingerprints, or behavioral profiles are '
@@ -144,14 +144,14 @@ class PrivacyScreen extends StatelessWidget {
             subColor: subColor,
             body:
                 'The information we collect is used solely to:\n\n'
-                '• Provide, maintain, and improve the PRP application.\n\n'
+                '• Provide, maintain, and improve the Monk application.\n\n'
                 '• Authenticate your identity and protect your account.\n\n'
                 '• Send transactional emails such as password resets and sign-in '
                 'confirmations (via Supabase Auth).\n\n'
                 '• Understand aggregate usage patterns to improve performance '
                 'and user experience (via anonymous analytics only).\n\n'
                 'We do not use your data for advertising, profiling, or any '
-                'purpose beyond operating and improving PRP.',
+                'purpose beyond operating and improving Monk.',
           ),
 
           _Section(
@@ -204,7 +204,7 @@ class PrivacyScreen extends StatelessWidget {
             textColor: textColor,
             subColor: subColor,
             body:
-                'PRP uses session cookies only — these are strictly necessary for '
+                'Monk uses session cookies only — these are strictly necessary for '
                 'keeping you logged in and maintaining your session state. We do not '
                 'use tracking cookies, advertising cookies, or any third-party cookies '
                 'that monitor your browsing activity across other websites.',
@@ -216,7 +216,7 @@ class PrivacyScreen extends StatelessWidget {
             textColor: textColor,
             subColor: subColor,
             body:
-                'PRP relies on the following third-party services, each with their '
+                'Monk relies on the following third-party services, each with their '
                 'own privacy practices:\n\n'
                 '• Supabase (database and authentication): https://supabase.com/privacy\n\n'
                 '• Vercel (hosting and analytics): https://vercel.com/legal/privacy-policy\n\n'
@@ -230,7 +230,7 @@ class PrivacyScreen extends StatelessWidget {
             textColor: textColor,
             subColor: subColor,
             body:
-                'PRP is not intended for use by anyone under the age of 13. We do '
+                'Monk is not intended for use by anyone under the age of 13. We do '
                 'not knowingly collect personal information from children under 13. '
                 'If you believe a child has provided us with personal information, '
                 'please contact us immediately at support@prp-app.website and we '
@@ -247,7 +247,7 @@ class PrivacyScreen extends StatelessWidget {
                 'changes in our practices or legal requirements. Material changes '
                 'will be communicated via in-app notice or email to your registered '
                 'address. We encourage you to review this policy periodically. '
-                'Continued use of PRP after changes constitutes your acceptance of '
+                'Continued use of Monk after changes constitutes your acceptance of '
                 'the updated policy.',
           ),
 

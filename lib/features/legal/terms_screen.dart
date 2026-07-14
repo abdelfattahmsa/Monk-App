@@ -8,7 +8,7 @@ const _keyPoints = [
   'All data is stored encrypted in your personal Supabase instance',
   'You can delete your account and all data at any time',
   'Vercel Analytics collects anonymous performance data only',
-  'PRP is a personal productivity tool — not financial advice',
+  'Monk is a personal productivity tool — not financial advice',
 ];
 
 class TermsScreen extends StatelessWidget {
@@ -125,9 +125,9 @@ class TermsScreen extends StatelessWidget {
             textColor: textColor,
             subColor: subColor,
             body:
-                'By accessing or using PRP (Personal Resource Planner), you agree '
+                'By accessing or using Monk (Personal Mastery OS), you agree '
                 'to be bound by these Terms of Service. If you do not agree to these '
-                'terms, please do not use the application. Your continued use of PRP '
+                'terms, please do not use the application. Your continued use of Monk '
                 'constitutes your acceptance of any updates or modifications to these terms.',
           ),
 
@@ -137,7 +137,7 @@ class TermsScreen extends StatelessWidget {
             textColor: textColor,
             subColor: subColor,
             body:
-                'You must be at least 18 years of age to use PRP. By using the '
+                'You must be at least 18 years of age to use Monk. By using the '
                 'application, you represent and warrant that you meet this age '
                 'requirement. If you are under 18, you are not permitted to use '
                 'the application.',
@@ -150,7 +150,7 @@ class TermsScreen extends StatelessWidget {
             subColor: subColor,
             body:
                 'You are responsible for maintaining the confidentiality of your '
-                'account credentials. All data you enter into PRP — including '
+                'account credentials. All data you enter into Monk — including '
                 'financial, health, and personal productivity information — is '
                 'stored in your personal Supabase instance and encrypted at rest. '
                 'You retain full ownership of your data. You may delete your account '
@@ -164,11 +164,11 @@ class TermsScreen extends StatelessWidget {
             textColor: textColor,
             subColor: subColor,
             body:
-                'You agree to use PRP only for lawful, personal productivity purposes. '
+                'You agree to use Monk only for lawful, personal productivity purposes. '
                 'You must not attempt to reverse-engineer, modify, or exploit the '
-                'application. You must not use PRP to store or transmit any illegal '
+                'application. You must not use Monk to store or transmit any illegal '
                 'content, or attempt to gain unauthorized access to any system or '
-                'network connected to PRP.',
+                'network connected to Monk.',
           ),
 
           _Section(
@@ -177,11 +177,11 @@ class TermsScreen extends StatelessWidget {
             textColor: textColor,
             subColor: subColor,
             body:
-                'All software, design, code, and content comprising PRP — excluding '
-                'data you enter — is the intellectual property of PRP\'s developers. '
+                'All software, design, code, and content comprising Monk — excluding '
+                'data you enter — is the intellectual property of Monk\'s developers. '
                 'You are granted a limited, non-exclusive, non-transferable license '
                 'to use the application for personal purposes only. You may not copy, '
-                'redistribute, or create derivative works from any part of PRP without '
+                'redistribute, or create derivative works from any part of Monk without '
                 'explicit written permission.',
           ),
 
@@ -191,7 +191,7 @@ class TermsScreen extends StatelessWidget {
             textColor: textColor,
             subColor: subColor,
             body:
-                'PRP is a personal productivity and planning tool. Nothing within the '
+                'Monk is a personal productivity and planning tool. Nothing within the '
                 'application — including any investment tracking, net worth calculations, '
                 'market data displays, or budget summaries — constitutes financial, '
                 'investment, legal, or tax advice. Always consult a qualified professional '
@@ -205,11 +205,11 @@ class TermsScreen extends StatelessWidget {
             textColor: textColor,
             subColor: subColor,
             body:
-                'To the maximum extent permitted by applicable law, PRP and its developers '
+                'To the maximum extent permitted by applicable law, Monk and its developers '
                 'shall not be liable for any indirect, incidental, special, consequential, '
                 'or punitive damages arising from your use of the application. This includes, '
                 'but is not limited to, loss of data, financial loss, or any decisions made '
-                'based on information displayed in the app. Your use of PRP is entirely at '
+                'based on information displayed in the app. Your use of Monk is entirely at '
                 'your own risk.',
           ),
 
@@ -221,7 +221,7 @@ class TermsScreen extends StatelessWidget {
             body:
                 'We reserve the right to update these Terms of Service at any time. '
                 'Material changes will be communicated via in-app notice or email. '
-                'Your continued use of PRP after any such changes constitutes your '
+                'Your continued use of Monk after any such changes constitutes your '
                 'acceptance of the revised terms. We encourage you to review these '
                 'terms periodically.',
           ),

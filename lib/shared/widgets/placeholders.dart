@@ -4,7 +4,7 @@ import 'package:gap/gap.dart';
 import '../../core/theme/app_theme.dart';
 
 // ══════════════════════════════════════════════════════════════
-// SHARED PLACEHOLDER WIDGETS — PRP System v3
+// SHARED PLACEHOLDER WIDGETS — Monk
 // ══════════════════════════════════════════════════════════════
 
 // ── SCREEN HEADER ─────────────────────────────────────────────

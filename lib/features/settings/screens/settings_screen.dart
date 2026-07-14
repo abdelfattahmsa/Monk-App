@@ -177,7 +177,7 @@ class _SettingsScreenState extends ConsumerState<SettingsScreen> {
                           ),
                           child: const Center(
                             child: Text(
-                              'PRP',
+                              'Monk',
                               style: TextStyle(
                                 color: AppColors.bg,
                                 fontFamily: 'PlayfairDisplay',

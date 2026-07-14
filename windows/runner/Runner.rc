@@ -90,12 +90,12 @@ BEGIN
         BLOCK "040904e4"
         BEGIN
             VALUE "CompanyName", "Kyberia Labs" "\0"
-            VALUE "FileDescription", "PRP — Personal Resource Planner" "\0"
+            VALUE "FileDescription", "Monk — Personal Mastery OS" "\0"
             VALUE "FileVersion", VERSION_AS_STRING "\0"
-            VALUE "InternalName", "PRP" "\0"
+            VALUE "InternalName", "Monk" "\0"
             VALUE "LegalCopyright", "Copyright (C) 2026 Kyberia Labs. All rights reserved." "\0"
-            VALUE "OriginalFilename", "PRP.exe" "\0"
-            VALUE "ProductName", "PRP" "\0"
+            VALUE "OriginalFilename", "Monk.exe" "\0"
+            VALUE "ProductName", "Monk" "\0"
             VALUE "ProductVersion", VERSION_AS_STRING "\0"
         END
     END

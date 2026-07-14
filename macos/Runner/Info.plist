@@ -29,8 +29,8 @@
 	<key>NSPrincipalClass</key>
 	<string>NSApplication</string>
 	<key>NSHealthShareUsageDescription</key>
-	<string>PRP reads your health data (weight, heart rate, steps, sleep, workouts) to show it alongside your manually logged data in the Health pillar.</string>
+	<string>Monk reads your health data (weight, heart rate, steps, sleep, workouts) to show it alongside your manually logged data in the Health pillar.</string>
 	<key>NSHealthUpdateUsageDescription</key>
-	<string>PRP can write weight entries to Apple Health to keep your records in sync.</string>
+	<string>Monk can write weight entries to Apple Health to keep your records in sync.</string>
 </dict>
 </plist>
