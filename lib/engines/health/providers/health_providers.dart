@@ -34,7 +34,8 @@ class HabitsNotifier extends AsyncNotifier<List<Habit>> {
     final habits = state.value!;
     final habit = habits.firstWhere((h) => h.id == id);
     final wasDone = habit.history[dateKey] ?? false;
-    await HealthRepository.instance.toggleHabitDay(id, dateKey, !wasDone);
+
+    // Optimistic update
     final newHistory = Map<String, bool>.from(habit.history);
     newHistory[dateKey] = !wasDone;
     final updated = habit.copyWith(history: newHistory);
@@ -44,6 +45,14 @@ class HabitsNotifier extends AsyncNotifier<List<Habit>> {
       longestStreak: newStreak > habit.longestStreak ? newStreak : habit.longestStreak,
     );
     state = AsyncData(habits.map((h) => h.id == id ? withStreak : h).toList());
+
+    try {
+      await HealthRepository.instance.toggleHabitDay(id, dateKey, !wasDone);
+    } catch (e) {
+      // Roll back to original state if DB write fails
+      state = AsyncData(habits);
+      rethrow;
+    }
   }
 }
 

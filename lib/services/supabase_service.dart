@@ -19,8 +19,13 @@ class SupabaseService {
 
   String get _uid => _db.auth.currentUser!.id;
 
-  // Ensures profile row exists before any user-data insert (FK guard)
+  // Guard: only upsert the profile row once per app session.
+  // The DB trigger handle_new_user() creates it on signup; this is a
+  // belt-and-suspenders FK guard that becomes a no-op after the first call.
+  bool _profileEnsured = false;
+
   Future<void> _ensureProfile() async {
+    if (_profileEnsured) return;
     final user = _db.auth.currentUser;
     if (user == null) return;
     await _db.from('profiles').upsert(
@@ -32,6 +37,7 @@ class SupabaseService {
       onConflict: 'id',
       ignoreDuplicates: true,
     );
+    _profileEnsured = true;
   }
 
   // ── AUTH ──────────────────────────────────────────────────────

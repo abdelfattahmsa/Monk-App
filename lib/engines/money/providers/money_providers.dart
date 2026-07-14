@@ -6,6 +6,8 @@ import 'package:uuid/uuid.dart';
 import '../data/models/money_models.dart';
 import '../data/repositories/money_repository.dart';
 import '../../../core/constants/app_constants.dart';
+import '../../../core/providers/app_settings_provider.dart';
+import '../../../services/fx_rates_service.dart';
 
 const _uuid = Uuid();
 
@@ -221,43 +223,52 @@ final stockPriceProvider =
   return null;
 });
 
-// ── Finance Summary (computed) ──
+// ── Finance Summary (computed, FX-aware) ──
 final financeSummaryProvider = Provider((ref) {
+  final base = ref.watch(currencyNotifierProvider).value ?? 'EGP';
+  final rates = ref.watch(fxRatesProvider).value ??
+      {'USD': 1.0, 'EGP': 50.0, 'EUR': 0.92, 'GBP': 0.79, 'SAR': 3.75, 'AED': 3.67};
+
+  // Convert any amount to the user's base currency
+  double toBase(double amount, String currency) =>
+      convertCurrency(amount, from: currency, to: base, rates: rates);
+
   final banks = ref.watch(bankAccountsProvider).value ?? [];
   final debts = ref.watch(debtsProvider).value ?? [];
   final txs = ref.watch(transactionsProvider).value ?? [];
   final cards = ref.watch(creditCardsProvider).value ?? [];
   final installments = ref.watch(installmentPlansProvider).value ?? [];
 
-  // Legacy CC totals from bank_accounts (kept for backward compat)
-  final totalCC = banks.fold(0.0, (s, b) => s + b.creditCardBalance);
-  final totalLimit = banks.fold(0.0, (s, b) => s + b.creditCardLimit);
+  // Legacy CC totals from bank_accounts (converted to base)
+  final totalCC = banks.fold(0.0, (s, b) => s + toBase(b.creditCardBalance, b.currency));
+  final totalLimit = banks.fold(0.0, (s, b) => s + toBase(b.creditCardLimit, b.currency));
 
-  // New: from dedicated credit_cards table
-  final totalCCFromCards = cards.fold(0.0, (s, c) => s + c.balance);
-  final totalCardLimit = cards.fold(0.0, (s, c) => s + c.limit);
-  final ccMinPayments = cards.fold(0.0, (s, c) => s + c.minPaymentAmount);
+  // New: from dedicated credit_cards table (converted to base)
+  final totalCCFromCards = cards.fold(0.0, (s, c) => s + toBase(c.balance, c.currency));
+  final totalCardLimit = cards.fold(0.0, (s, c) => s + toBase(c.limit, c.currency));
+  final ccMinPayments = cards.fold(0.0, (s, c) => s + toBase(c.minPaymentAmount, c.currency));
   final totalInstallments = installments
       .where((p) => !p.isCompleted)
-      .fold(0.0, (s, p) => s + p.monthlyPayment);
+      .fold(0.0, (s, p) => s + toBase(p.monthlyPayment, p.currency));
 
-  final totalSavings = banks.fold(0.0, (s, b) => s + b.savingsBalance);
-  final totalCurrent = banks.fold(0.0, (s, b) => s + b.currentBalance);
+  final totalSavings = banks.fold(0.0, (s, b) => s + toBase(b.savingsBalance, b.currency));
+  final totalCurrent = banks.fold(0.0, (s, b) => s + toBase(b.currentBalance, b.currency));
+  // ExternalDebt has no currency field — assumed to be in base currency
   final totalExtDebt = debts.fold(0.0, (s, d) => s + d.amount);
 
-  // Unified CC total = legacy + new cards
   final unifiedCC = totalCC + totalCCFromCards;
   final unifiedLimit = totalLimit + totalCardLimit;
   final totalDebt = unifiedCC + totalExtDebt;
   final remainingLimit = unifiedLimit - unifiedCC;
 
+  final now = DateTime.now();
   final todaySpend = txs
       .where((t) =>
           !t.isIncome &&
-          t.date.year == DateTime.now().year &&
-          t.date.month == DateTime.now().month &&
-          t.date.day == DateTime.now().day)
-      .fold(0.0, (s, t) => s + t.amount);
+          t.date.year == now.year &&
+          t.date.month == now.month &&
+          t.date.day == now.day)
+      .fold(0.0, (s, t) => s + toBase(t.amount, t.currency));
 
   return FinanceSummary(
     totalCC: unifiedCC,
